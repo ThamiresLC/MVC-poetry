@@ -1,0 +1,95 @@
+﻿@model AplicacaoWebMVC.ViewModels.UsuarioViewModel
+
+<link rel="stylesheet" href="~/css/Usuario/edicao.css" asp-append-version="true" />
+
+<body class="body3">
+	<br />
+	<br />
+	<form asp-action="Edicao" asp-controller="Usuarios" method="post" enctype="multipart/form-data">
+		@Html.HiddenFor(model => model.Id)
+	<div class="fonteedicao">
+		<div class="row">
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="nome">Nome</label>
+					<input type="text" class="form-control" asp-for="Nome" id="nome" name="Nome" placeholder="Alterar nome" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="nome">CPF</label>
+					<input type="text" class="form-control" id="cpf" asp-for="CPF" name="CPF" placeholder="000.000.000-00" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="datanascimento">Data de nascimento</label>
+					<input type="date" class="form-control" id="datanascimento" asp-for="DataNascimento" name="DataNascimento" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="email">E-mail</label>
+					<input type="email" class="form-control" id="email" asp-for="Email" name="Email" placeholder="Alterar e-mail" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="telefone1">Celular</label>
+					<input type="text" class="form-control" id="celular" asp-for="Celular" name="Celular" placeholder="Alterar celular" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="telefone2">Telefone</label>
+					<input type="text" class="form-control" id="telefone" asp-for="Telefone" name="Telefone" placeholder="Alterar telefone" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="cep">CEP</label>
+					<input type="text" class="form-control" id="cep" asp-for="CEP" name="CEP" placeholder="00000-000" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="logradouro">Logradouro</label>
+					<input type="text" class="form-control" id="logradouro" asp-for="Logradouro" name="Logradouro" placeholder="Alterar endereço" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="bairro">Bairro</label>
+					<input type="text" class="form-control" id="bairro" asp-for="Bairro" name="Bairro" placeholder="Alterar bairro" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="cidade">Cidade</label>
+					<input type="text" class="form-control" id="cidade" asp-for="Cidade" name="Cidade" placeholder="Alterar cidade" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="uf">UF</label>
+					<input type="text" class="form-control" id="uf" asp-for="UF" name="Uf" placeholder="UF" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="file">Alterar foto</label>
+					<input type="file" class="form-control transparent-input transparente" asp-for="File" id="file" name="File">
+				</div>
+			</div>
+			<span class="group-btn">
+				<button type="submit" class="btn btn-danger btn-md botaocadastro">Salvar <i class="bi bi-check2"></i></button>
+				<button asp-controller="Usuarios" asp-action="Usuarios" class="btn btn-danger btn-md botaocadastro">Lista <i class="bi bi-arrow-bar-right"></i></button>
+			</span>
+		</div>
+	</div>
+	</form>
+</body>
+
+@section Scripts{
+<script src="~/js/Usuario/edicaoUsuario.js" asp-append-version="true"></script>
+}

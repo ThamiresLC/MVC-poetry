@@ -1,0 +1,36 @@
+html {
+  font-size: 15px;
+}
+
+.menutitulo {
+    font-family: 'Dancing Script', cursive !important;
+
+}
+
+@media (min-width: 768px) {
+    html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+   
+}
+
+
+.footer {
+    position: fixed;
+    height: 5%;
+    bottom: 0 !important;
+    width: 100%;
+    font: normal 14px Roboto,arial,sans-serif;
+    font-family: 'Dancing Script', cursive !important;
+    color: pink !important;
+    font-weight: 800;
+}

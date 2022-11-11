@@ -1,0 +1,30 @@
+﻿@model AplicacaoWebMVC.ViewModels.AlterarSenhaUsuarioViewModel
+
+
+<link rel="stylesheet" href="~/css/Autenticacao/recuperarsenha.css" asp-append-version="true" />
+
+<body class="body2">
+	<form asp-action="RecuperarSenha" asp-controller="Autenticacao" method="post">
+		<div class="row">
+			<h2 class="fonterecuperacao"> Recuperação de senha<i class="bi bi-lock-fill cadiado"></i></h2>
+			<br />
+			<hr />
+			<h5 class="fonterecuperacao">Por favor, digite sua senha nova.</h5>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="senha">Nova senha:</label>
+					<input type="password" class="form-control" id="novaSenha" placeholder="Nova Senha" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="confirmarSenha">Confirmar senha:</label>
+					<input type="password" class="form-control" id="confirmarSenha" placeholder="Confirmar Senha" />
+				</div>
+			</div>
+			<span class="group-btn">
+				<button type="submit" class="btn btn-danger btn-md botao">Salvar <i class="bi bi-check2"></i></button>
+			</span>
+		</div>
+	</form>
+</body>

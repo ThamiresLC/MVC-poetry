@@ -1,0 +1,52 @@
+﻿.body3 {
+    background-image: url('https://media.istockphoto.com/photos/abstract-luxury-black-gradient-with-border-black-vignette-background-picture-id1202572695?b=1&k=6&m=1202572695&s=170667a&w=0&h=sZfsbSEOaF1wlrmrTYRRuwnx_l8bKR94RecKdIfmBYk=');
+    background-position: center;
+    background-size: cover;
+}
+
+.titulopoesia {
+    font: normal 40px Roboto,arial,sans-serif;
+    font-family: 'Dancing Script', cursive !important;
+    text-align: center !important;
+    margin-top: 3%;
+    color: white;
+}
+
+.titulodestaque {
+    font-family: 'Dancing Script', cursive !important;
+    text-align: center;
+    margin-top: 2%;
+    color: white;
+}
+
+card {
+   width: 20rem;
+   margin-top: 20% !important;
+}
+
+.divfooter{
+    margin-left: 80%;
+    
+}
+
+.divfooter1 {
+    margin-left: 80%;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a{
+    color: black;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-text{
+    text-align: center;
+}
+

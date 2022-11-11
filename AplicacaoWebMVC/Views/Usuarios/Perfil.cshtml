@@ -1,0 +1,71 @@
+﻿@model AplicacaoWebMVC.ViewModels.UsuarioViewModel
+
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/Usuario/perfil.css" asp-append-version="true" />
+
+<body class="body5">
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col">
+				<img class="img" src="../../@Model.FotoPerfil" width="200" height="200">
+				<input type="hidden" asp-for="Id" name="Id" id="usuarioId"/>
+				<h6 class="user">@Model.User</h6>
+				<ul type="circle" class="lista">
+					<li>@Model.Nome</li>
+					<li>@Model.DataNascimento</li>
+					<li>@Model.Celular</li>
+					<li>@Model.Cidade</li>
+					<li>@Model.UF</li>
+					<li><a asp-action="Cadastrar" asp-controller="Poesias">Escreva seu poema</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<h1 class='text-white tituloperfil'><i class="bi bi-moon-stars-fill">Poetry</i></h1>
+				@if (Model != null)
+				{
+					foreach (var item in Model.Poesias)
+					{
+						<br />
+						<hr />
+						<h2 class="titulo">@item.Titulo</h2>
+						<p class="texto">@Html.Raw(item.TextoPoesia)</p>
+						<br /> <br />
+						<div class="form-group controlrange vocegostou">
+							<h4>Você gostou?</h4>
+							<input type="range" class="form-control-range" id="formControlRange">
+						</div>
+						<div class="col">
+							<a href="#" onclick="abrirModalExclusao(@item.Id);"><i style="cursor: pointer;" class="bi bi-trash"></i></a>
+						</div> 
+					}
+				}
+			</div>
+		</div>
+	</div>
+</body>
+<div class="modal" tabindex="-1" role="dialog" id="modalExclusaoPoesia">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+		<input type="hidden" id="poesiaExclusaoId" />
+      <div class="modal-header">
+        <h5 class="modal-title">Excluir poesia</h5>
+        <button type="button" onclick="fecharModalExclusao();" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body tituloexclusao">
+        <p>Tem certeza que deseja excluir? &#128557;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="fecharModalExclusao();" class="btn btn-primary btn-sm botaoexclusao">Fechar</button>
+        <button type="button" onclick="excluirPoesia();" class="btn btn-danger btn-sm botaoexclusao" data-dismiss="modal">Excluir</button>
+      </div>
+    </div>
+  </div>
+</div>
+@section Scripts{
+<script src="~/js/Usuario/exclusaoPoesia.js" asp-append-version="true"></script>
+}

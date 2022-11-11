@@ -1,0 +1,73 @@
+﻿.autenticacao1{
+    font-size: 15px !important;
+}
+
+.body5 {
+    background-image: url('https://i.imgur.com/69yUegu.gif');
+    background-position: center;
+    background-size: cover;
+}
+
+a{
+    color: black;
+}
+
+.modal-title {
+    font-family: 'Dancing Script', cursive !important;
+}
+
+.botaoexclusao {
+    font-family: 'Dancing Script', cursive !important;
+}
+
+.tituloexclusao {
+    font-family: 'Dancing Script', cursive !important;
+    text-align: center !important;
+}
+
+.titulousuario {
+    margin-top: 4%;
+    text-align: center;
+    font-weight: 400;
+    font: normal 40px Roboto,arial,sans-serif;
+    font-family: 'Dancing Script', cursive !important;
+    color: pink;
+}
+
+.tituloexclusao {
+    text-align: center !important;
+    font-family: 'Dancing Script', cursive !important;
+}
+
+
+
+.fonteusuario {
+    margin-top: 4%;
+    text-transform: uppercase;
+    font-family: Courier New, Courier, monospace;
+    text-align: center;
+    font-weight: 400;
+}
+
+.tabelaestilo {
+    color: white;
+    border: lightpink double !important;
+    border-width: 20px 5px;
+    border-radius: 10px;
+    font-weight: 600;
+    
+}
+
+.tabela {
+    border-left: none;
+}
+
+.corpotabela {
+    background-color: white;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: deeppink;
+}

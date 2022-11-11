@@ -1,0 +1,62 @@
+﻿
+.body1 {
+    background-image: url('https://i.imgur.com/69yUegu.gif');
+    background-position: center;
+    background-size: cover;
+}
+
+a {
+    color: black;
+}
+
+.titulousuario {
+    margin-top: 4%;
+    text-align: center;
+    font-weight: 400;
+    font: normal 40px Roboto,arial,sans-serif;
+    font-family: 'Dancing Script', cursive !important;
+    color: pink !important;
+}
+
+
+.fonteusuario {
+    margin-top: 4%;
+    text-transform: uppercase;
+    font-family: Courier New, Courier, monospace;
+    text-align: center;
+    font-weight: 400;
+   
+}
+
+.tabelaestilo {
+    color: white;
+    border: lightpink double !important;
+    border-width: 20px 5px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: pink !important;
+}
+
+.tabela {
+    border-left: none;
+}
+
+.corpotabela {
+    background-color: white;
+    color: black;
+}
+
+.iconperfil {
+    margin-left: 70%;
+    color: white;
+    font-size: 1.2em;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: pink;
+}

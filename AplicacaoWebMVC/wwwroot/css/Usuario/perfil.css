@@ -1,0 +1,67 @@
+﻿.img {
+    border-radius: 50%;
+    margin-top: 10%;
+}
+
+.titulo {
+}
+
+.body5 {
+    background-image: url('https://img.freepik.com/fotos-gratis/cores-brilhantes-dispostas-em-gradiente_23-2147734173.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.tituloperfil {
+    font: normal 40px Roboto,arial,sans-serif;
+    font-family: 'Dancing Script', cursive !important;
+    text-align: center;
+    margin-top: 10%;
+}
+
+hr {
+    text-align: center;
+    background-color: white;
+    border: 10px dashed white;
+    border-radius: 5px;
+}
+
+.texto {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: 800;
+    text-align: center;
+    color: black;
+}
+
+.user {
+    font-family: fantasy;
+    color: black;
+    font-weight: 600;
+    margin-top: 3%;
+    margin-left: 12%;
+}
+
+.lista {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    color: white;
+}
+
+.perfil {
+    font: normal 28px Roboto,arial,sans-serif;
+    font-family: 'Dancing Script', cursive !important;
+    margin-left: 9%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    font-weight: 600;
+}
+
+.vocegostou {
+    text-align: center;
+    color: black;
+    font-family: fantasy;
+}

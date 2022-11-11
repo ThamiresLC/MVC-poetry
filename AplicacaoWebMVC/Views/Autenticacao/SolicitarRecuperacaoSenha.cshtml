@@ -1,0 +1,31 @@
+﻿@model AplicacaoWebMVC.ViewModels.AlterarSenhaUsuarioViewModel
+
+<link rel="stylesheet" href="~/css/Autenticacao/solicitarsenha.css" asp-append-version="true" />
+
+<body class="body1">
+	<br />
+	<form asp-action="SolicitarRecuperacaoSenha" asp-controller="Autenticacao" method="post">
+		<div class="row">
+			<h2 class="fonterecuperacao"> Recuperação de senha<i class="bi bi-lock-fill cadiado"></i></h2>
+			<br />
+			<hr />
+			<h5 class="fonterecuperacao">Por favor, informe seu e-mail. Enviaremos um link para recuperação de senha.</h5>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="email">E-mail cadastrado:</label>
+					<input type="text" class="form-control" id="email" placeholder="Digite seu e-mail" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<label for="emailConfirma">Confirmar e-mail:</label>
+					<input type="text" class="form-control" id="emailConfirma" placeholder="Digite seu e-mail" />
+				</div>
+			</div>
+			<span class="group-btn">
+			<a asp-controller="Usuarios" asp-action="Login" class="btn btn-danger btn-md botao"><i class="bi bi-arrow-bar-left"></i> Voltar</a>
+			<button type="submit" class="btn btn-danger btn-md botao1">Enviar <i class="bi bi-envelope-paper-heart"></i></button>
+		</span>
+		</div>
+	</form>
+</body>

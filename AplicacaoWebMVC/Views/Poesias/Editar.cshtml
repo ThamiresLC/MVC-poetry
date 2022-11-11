@@ -1,0 +1,42 @@
+﻿@model AplicacaoWebMVC.ViewModels.PoesiaViewModel
+
+<link rel="stylesheet" href="~/css/Poesia/editor.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/Poesia/neo.css" asp-append-version="true" />
+
+<body class="body2">
+	 
+		<form asp-action="Editar" asp-controller="Poesias" method="post" enctype="multipart/form-data"> 
+
+	<h1 class="text-white mt-4"> Editar poesia </h1>
+	<img src="@Model.UrlImagem" width="450" height="450" />
+	<div class="col-sm-5 mt-4">
+		<div class="form-group">
+			<input type="file" class="form-control transparent-input" id="imagem" asp-for="Imagem" name="Imagem">
+		</div>
+	</div>
+	<div class="row mb-4 mt-5">
+		<div class="col-sm-9">
+			<div class="form-group">
+				<input type="text" placeholder="Título" class="form-control" id="titulo" asp-for="Titulo" name="Titulo" />
+			</div>
+		</div>
+
+		<div class="col-sm-3">
+			<div class="form-group">
+				<input type="date" placeholder="Data" class="form-control" id="data" asp-for="Data" name="Data" />
+			</div>
+		</div>
+	</div>
+	<div id="editor" class="mt-4" style="margin-top: 5% !important;" id="textoPoesia" asp-for="TextoPoesia" name="TextoPoesia">
+	</div>
+	<span>
+		<button class="btn btn-danger btn-md mt-4">Salvar</button>
+		<a asp-controller="Poesias" asp-action="Poesia" class="btn btn-danger btn-md mt-4">Lista <i class="bi bi-arrow-bar-right"></i></a>
+	</span>
+	</form>
+</body>
+
+@section Scripts {
+<script src="~/js/ckeditor.js" asp-append-version="true"></script>
+<script src="~/js/editor.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,42 @@
+﻿@model AplicacaoWebMVC.ViewModels.AlterarSenhaUsuarioViewModel
+
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/Usuario/alterarsenha.css" asp-append-version="true" />
+
+<body class="body5">
+	<br />
+	<br />
+	<form asp-controller="Usuarios" asp-action="AlterarSenha" method="post">
+	<div class="fontesenha">
+		<div class="row">
+			<div class="col-sm-5 formulario1">
+				<div class="form-group">
+					<input type="text" class="form-control" id="userEdit"  name="User" asp-for="User" placeholder="Alterar User" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario1">
+				<div class="form-group">
+					<input type="password" class="form-control" name="SenhaAtual" asp-for="SenhaAtual" placeholder="Senha Atual" />
+				</div>	
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+                     <input type="password" class="form-control" name="NovaSenha" asp-for="NovaSenha" placeholder="Nova Senha" />
+				</div>
+			</div>
+			<div class="col-sm-5 formulario">
+				<div class="form-group">
+					<input type="password" class="form-control" name="SenhaConfirma" asp-for="SenhaConfirma" placeholder="Confirmar Senha" />
+				</div>
+			</div>
+			<span class="group-btn">
+				<button type="submit" class="btn btn-danger btn-md botaoedicao">Salvar <i class="bi bi-check2"></i></button>
+				<a asp-controller="Usuarios" asp-action="Usuarios" class="btn btn-danger btn-md botaoedicao">Lista <i class="bi bi-arrow-bar-right"></i></a>
+			</span>
+		</div>
+	</div>
+</form>
+</body>

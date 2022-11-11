@@ -1,0 +1,69 @@
+﻿@model IEnumerable<AplicacaoWebMVC.ViewModels.UsuarioViewModel>
+@*
+	For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/css/Usuario/usuarios.css" asp-append-version="true" />
+
+<body class="body5">
+	<h1 class='titulousuario'><i class="bi bi-moon-stars-fill">Usuários</i></h1>
+	<div class="fonteusuario">
+		<table class="table table-sm table table-striped tabelaestilo">
+			<thead>
+				<tr>
+					<th scope="col">Nome</th>
+					<th scope="col">CPF</th>
+					<th scope="col">@@User</th>
+					<th scope="col">E-mail</th>
+					<th scope="col">Celular</th>
+					<th scope="col">UF</th>
+					<th scope="col">Ações</th>
+				</tr>
+			</thead>
+			<tbody class="corpotabela">
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td scope="col">@item.Nome</td>
+						<td scope="col">@item.CPF</td>
+						<td scope="col">@item.User</td>
+						<td scope="col">@item.Email</td>
+						<td scope="col">@item.Celular</td>
+						<td scope="col">@item.UF</td>
+						<td scope="col">
+							<a asp-controller="Usuarios" asp-action="Perfil" asp-route-id="@item.Id"><i style="cursor: pointer;" class="bi bi-eye"></i></a>
+							<a asp-controller="Usuarios" asp-action="Edicao" asp-route-id="@item.Id"><i style="cursor: pointer;" class="bi bi-pencil"></i></a>
+							<a asp-controller="Usuarios" asp-action="AlterarSenha" asp-route-id="@item.Id"><i class="bi bi-gear"></i></a>
+							<a href="#" onclick="abrirModalExclusao(@item.Id);"><i style="cursor: pointer;" class="bi bi-trash"></i></a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</body>
+<div class="modal" tabindex="-1" role="dialog" id="modalExclusaoUsuario">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+		<input type="hidden" id="usuarioExclusaoId" />
+      <div class="modal-header">
+        <h5 class="modal-title">Excluir conta</h5>
+        <button type="button" onclick="fecharModalExclusao();" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body tituloexclusao">
+        <p>Tem certeza que deseja excluir? &#128557;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="fecharModalExclusao();" class="btn btn-primary btn-sm botaoexclusao">Fechar</button>
+        <button type="button" onclick="excluirUsuario();" class="btn btn-danger btn-sm botaoexclusao" data-dismiss="modal">Excluir</button>
+      </div>
+    </div>
+  </div>
+</div>
+@section Scripts{
+<script src="~/js/Usuario/exclusaoUsuario.js" asp-append-version="true"></script>
+}

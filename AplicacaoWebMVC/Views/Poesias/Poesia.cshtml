@@ -1,0 +1,50 @@
+﻿@model IEnumerable<AplicacaoWebMVC.ViewModels.PoesiaViewModel>
+
+<link rel="stylesheet" href="~/css/Poesia/poesia.css" asp-append-version="true" />
+<body class="body3">
+	<h1 class="titulopoesia"><i class="bi bi-moon-stars-fill">Poetry</i></h1>
+	<hr />
+	<h4 class="titulodestaque">Poesias em destaque<i class="bi bi-arrow-down-short"></i></h4>
+	<br />
+	<br />
+	<div class="container">
+		<div class="row">
+			@if (Model != null)
+			{
+				foreach (var item in Model)
+				{
+					<div class="col-sm-6 mt-4">
+						<div class="card">
+							<img class="card-img-top" src="../../@item.UrlImagem" alt="Card image cap" width="300" height="400" >
+							<div class="card-body">
+								<h5 class="card-title">@item.Titulo</h5>
+								<p class="card-text">
+									@Html.Raw(item.TextoPoesia) <br /><br />
+								</p>
+								<div class="divfooter">
+									<a asp-controller="Usuarios" asp-action="Perfil"><i class="bi bi-person-circle"> @@aunnt </i></a>
+								</div>
+								<div class="divfooter1">
+									<p>@item.Data</p>
+								</div>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">
+									<span class="float-start">
+										<a href=""><i class="bi bi-eye"></i>  600  </a>
+										@*<a href="#" class="btn btn-primary">Go somewhere</a>*@
+									</span>
+									<span class="float-end">
+										<a href=""><i class="bi bi-hand-thumbs-up"></i>  540 </a> |
+										<a href=""><i class="bi bi-chat-heart"></i>  100 </a>
+									</span>
+								</small>
+							</div>
+						</div>
+					</div>
+				}
+			}
+		</div>
+	</div>
+</body>
+

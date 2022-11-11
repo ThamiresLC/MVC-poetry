@@ -1,0 +1,69 @@
+﻿
+.body2 {
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/db51d291459275.5e330d5792c99.gif');
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    margin-top: 3%;
+    text-align: center;
+    color: pink;
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: 800;
+}
+
+h5 {
+    text-align: center;
+    color: pink;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formulario {
+    margin-top: 1%;
+    margin-left: 5%;
+    color: white !important;
+}
+
+.tituloedicao {
+    margin-top: 19px;
+    text-align: center;
+    font: normal 40px Roboto,arial,sans-serif;
+    font-family: 'Dancing Script', cursive !important;
+}
+
+.fonteedicao {
+    margin-left: 15%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+::placeholder {
+    color: black !important;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+
+textarea:focus, input:focus {
+    color: black !important;
+    font-size: 15px !important;
+    
+}
+
+
+.botaocadastro {
+    margin-top: 3%;
+    margin-right: 20% !important;
+    font-family: 'Dancing Script', cursive !important;
+}
+
+.botaocadastro1 {
+    margin-top: 3%;
+    margin-right: 20% !important;
+    margin-left: 30%;
+    font-family: 'Dancing Script', cursive !important;
+}

@@ -1,0 +1,35 @@
+﻿.body2 {
+    background-image: url('https://i.pinimg.com/originals/72/2e/d4/722ed4271802efddb517f0d9234ca375.gif');
+    background-position: center;
+    background-size: cover
+}
+
+.fonterecuperacao {
+    font-family: 'Dancing Script', cursive !important;
+    text-align: center;
+    margin-top: 2%;
+    color: #CD5C5C;
+    font-weight: 800;
+}
+
+.cadiado {
+    color: darkgoldenrod;
+}
+
+.formulario {
+    margin-top: 5%;
+    margin-left: 5%;
+    color: black;
+    font-weight: 900;
+}
+
+.botao {
+    margin-top: 3%;
+    margin-left: 5%;
+    font-family: 'Dancing Script', cursive !important;
+}
+
+.botao1 {
+    margin-top: 3%;
+    font-family: 'Dancing Script', cursive !important;
+}

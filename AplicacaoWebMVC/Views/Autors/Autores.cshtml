@@ -1,0 +1,42 @@
+﻿@model IEnumerable<AplicacaoWebMVC.ViewModels.AutorViewModel>
+
+@{
+	ViewData["Title"] = "Listar";
+}
+<link rel="stylesheet" href="~/css/Autor/autores.css" asp-append-version="true" />
+
+
+<body class="body1">
+	<h1 class="titulousuario"><i class="bi bi-moon-stars-fill">Lista de Autores</i></h1>
+	 <a asp-action="Cadastrar" class="iconperfil"> Quero me tornar um autor <i class="bi bi-person-plus-fill"></i></a>
+	<div class="fonteusuario">
+		<table class="table table-sm table table-striped tabelaestilo">
+			<thead>
+				<tr>
+					<th scope="col">Nome</th>	
+					<th scope="col">E-mail</th>
+					<th scope="col">Celular</th>
+					<th scope="col">UF</th>
+					<th scope="col">Ações</th>
+				</tr>
+			</thead>
+			<tbody class="corpotabela">
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td scope="col">@item.Nome</td>
+						<td scope="col">@item.Email</td>
+						<td scope="col">@item.Celular</td>
+						<td scope="col">@item.UF</td>
+						<td scope="col">
+							<a asp-action="Detalhar" asp-route-id="@item.Id"><i style="cursor: pointer;" class="bi bi-eye"></i></a>
+							<a asp-action="Editar" asp-route-id="@item.Id"><i style="cursor: pointer;" class="bi bi-pencil"></i></a> 
+							<a asp-action="Excluir" asp-route-id="@item.Id"><i style="cursor: pointer;" class="bi bi-trash"></i></a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</body>
+

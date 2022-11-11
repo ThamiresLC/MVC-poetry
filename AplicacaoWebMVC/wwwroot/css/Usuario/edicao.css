@@ -1,0 +1,48 @@
+﻿
+.body3 {
+    background-image: url('https://wallpaperaccess.com/full/1155007.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.formulario{
+    margin-top: 1%;
+}
+
+.tituloedicao {
+    margin-top: 19px;
+    text-align: center;
+    font: normal 40px Roboto,arial,sans-serif;
+    font-family: 'Dancing Script', cursive !important;
+}
+
+.fonteedicao {
+    margin-left: 15%;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    color: #fcfcfc;
+}
+
+
+::placeholder {
+    color: black !important;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+
+textarea:focus, input:focus {
+    color: black !important;
+    font-size: 15px !important;
+    
+}
+
+
+.botaocadastro {
+    margin-top: 3%;
+    margin-right: 18% !important;
+    font-family: 'Dancing Script', cursive !important;
+}
